@@ -25,9 +25,7 @@ class User < ApplicationRecord
   has_many :event_listings, :foreign_key => "creator_id", :dependent => :destroy
   belongs_to :user_city, :class_name => "City"
   validates :first_name,
-            :last_name, 
-            :user_city_id,
-            :event_id,
+            :last_name,
             :email, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
