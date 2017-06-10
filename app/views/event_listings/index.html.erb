@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>
+    Event listings
+    <a href="/event_listings/new" class="btn btn-lg btn-success">New Event listing</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Event name</th>
+        <th>Event type</th>
+        <th>Event date</th>
+        <th>Location</th>
+        <th>Event description</th>
+        <th>Creator</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @event_listings.each do |event_listing| %>
+      <tr>
+        <td><%= event_listing.event_name %></td>
+        <td><%= event_listing.event_type %></td>
+        <td><%= event_listing.event_date %></td>
+        <td><%= event_listing.location_id %></td>
+        <td><%= event_listing.event_description %></td>
+        <td><%= event_listing.creator_id %></td>
+        <td>
+          <a href="/event_listings/<%= event_listing.id %>" class="btn btn-primary">Show</a>
+          <a href="/event_listings/<%= event_listing.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_event_listing/<%= event_listing.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
