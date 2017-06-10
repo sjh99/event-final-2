@@ -1948,3 +1948,320 @@ Processing by CitiesController#index as HTML
 Completed 200 OK in 112ms (Views: 99.9ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-10 15:56:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  Rendered cities/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 424ms (Views: 394.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-10 15:56:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_up"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 24ms (ActiveRecord: 1.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=sign_up:
+  activerecord (5.0.3) lib/active_record/core.rb:173:in `find'
+  app/controllers/users_controller.rb:9:in `show'
+  actionpack (5.0.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.3) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.3) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.3) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.3) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.3) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.3) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.3) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/ecf125b153410b1b/variables" for 127.0.0.1 at 2017-06-10 15:56:59 -0700
+Started GET "/" for 127.0.0.1 at 2017-06-10 15:58:56 -0700
+Processing by CitiesController#index as HTML
+  Rendering cities/index.html.erb within layouts/application
+  [1m[36mCity Load (4.0ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  Rendered cities/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 110ms (Views: 98.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-10 15:59:00 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (123.7ms)
+Completed 200 OK in 296ms (Views: 262.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-06-10 15:59:15 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SY/k9u3Rcn4xvwaNehULbSj7NvgPZM9FxF6WTdVvrar8uYOfa7dIS5+XY5llEomdtIKW3XBLxCCtJny3oM3Skg==", "user"=>{"email"=>"alice@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 573ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170610230656)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/users" for 127.0.0.1 at 2017-06-10 16:09:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+  activerecord (5.0.3) lib/active_record/migration.rb:573:in `check_pending!'
+  activerecord (5.0.3) lib/active_record/migration.rb:549:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.3) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/7bb141c8d1a8b185/variables" for 127.0.0.1 at 2017-06-10 16:09:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCities (20170610024353)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "cities"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170610024353"]]
+  [1m[35m (22.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users" for 127.0.0.1 at 2017-06-10 16:11:00 -0700
+
+NameError - uninitialized constant User:
+  activesupport (5.0.3) lib/active_support/dependencies.rb:550:in `load_missing_constant'
+  activesupport (5.0.3) lib/active_support/dependencies.rb:203:in `const_missing'
+  activesupport (5.0.3) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+  activesupport (5.0.3) lib/active_support/inflector/methods.rb:266:in `constantize'
+  activesupport (5.0.3) lib/active_support/dependencies.rb:583:in `get'
+  activesupport (5.0.3) lib/active_support/dependencies.rb:614:in `constantize'
+  devise (4.3.0) lib/devise.rb:313:in `get'
+  devise (4.3.0) lib/devise/mapping.rb:81:in `to'
+  devise (4.3.0) lib/devise/mapping.rb:76:in `modules'
+  devise (4.3.0) lib/devise/mapping.rb:93:in `routes'
+  devise (4.3.0) lib/devise/mapping.rb:160:in `default_used_route'
+  devise (4.3.0) lib/devise/mapping.rb:70:in `initialize'
+  devise (4.3.0) lib/devise.rb:343:in `add_mapping'
+  devise (4.3.0) lib/devise/rails/routes.rb:241:in `block in devise_for'
+  devise (4.3.0) lib/devise/rails/routes.rb:240:in `devise_for'
+  config/routes.rb:38:in `block in <top (required)>'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:389:in `eval_block'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:371:in `draw'
+  config/routes.rb:1:in `<top (required)>'
+  activesupport (5.0.3) lib/active_support/dependencies.rb:287:in `block in load'
+  activesupport (5.0.3) lib/active_support/dependencies.rb:259:in `load_dependency'
+  activesupport (5.0.3) lib/active_support/dependencies.rb:287:in `load'
+  railties (5.0.3) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (5.0.3) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (5.0.3) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (5.0.3) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (5.0.3) lib/active_support/file_update_checker.rb:77:in `execute'
+  railties (5.0.3) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (5.0.3) lib/rails/application/finisher.rb:132:in `block (2 levels) in <module:Finisher>'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:396:in `block in make_lambda'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:547:in `block (2 levels) in default_terminator'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:546:in `block in default_terminator'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:170:in `block in halting'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:454:in `block in call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:454:in `call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_run_callbacks'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  activesupport (5.0.3) lib/active_support/execution_wrapper.rb:108:in `run!'
+  activesupport (5.0.3) lib/active_support/reloader.rb:113:in `run!'
+  activesupport (5.0.3) lib/active_support/execution_wrapper.rb:70:in `block in run!'
+  activesupport (5.0.3) lib/active_support/execution_wrapper.rb:67:in `run!'
+  activesupport (5.0.3) lib/active_support/reloader.rb:59:in `run!'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:10:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.3) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/43823bafa8001a59/variables" for 127.0.0.1 at 2017-06-10 16:11:01 -0700
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-10 16:15:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_up"):
+  
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1110.2ms)
